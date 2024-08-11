@@ -1,0 +1,55 @@
+.board {
+    display: grid;
+    gap: 2px;
+    justify-content: center;
+    margin: 0 auto;
+    transition: grid-template-columns 0.5s ease;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(0.9);
+    animation: appear 0.5s ease forwards;
+}
+
+.cell.white {
+    background-color: #f0d9b5;
+}
+
+.cell.black {
+    background-color: #b58863;
+}
+
+.cell.queen::before {
+    content: "♕";
+    font-size: 32px;
+    color: red;
+    transform: scale(0.8);
+    animation: appear 0.7s ease forwards;
+    /* Adjusted speed */
+}
+
+@keyframes appear {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.dark .cell.white {
+    background-color: #444444;
+}
+
+.dark .cell.black {
+    background-color: #333333;
+}

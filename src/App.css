@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light {
+  background-color: #ffffff;
+  /* Light background color */
+  color: #333;
+}
+
+.dark {
+  background-color: #121212;
+  /* Dark background color */
+  color: #f4f4f4;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+input[type="number"] {
+  margin: 10px;
+  padding: 5px;
+  font-size: 16px;
+  width: 60px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+input[type="range"] {
+  width: 200px;
+}
